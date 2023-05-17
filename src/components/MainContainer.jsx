@@ -1,13 +1,13 @@
 import React from "react";
-import SideBar from "./SideBar";
+import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
 
 const MainContainer = () => {
   return (
-    <React.Fragment>
-      <SideBar/>
+    <div className="flex flex-col">
+      <ButtonList/>
       <VideoContainer/>
-    </React.Fragment>
+    </div>
   );
 };
 

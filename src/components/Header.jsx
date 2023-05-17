@@ -2,11 +2,21 @@ import React from "react";
 import headerIcon from "../svg/headerIcon.svg";
 import searchIcon from "../svg/searchIcon.svg";
 import userIcon from "../svg/userIcon.svg";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../Utils/appSlice";
 const Header = () => {
+  
+  const dispatch=useDispatch();
+const toggleMenuHandler=()=>{
+    dispatch(toggleMenu())
+    // console.log(dispatch(toggleMenu))
+    console.log("hello")
+  }
+
   return (
     <div className="flex flex-row shadow-md p-4 justify-between">
       <div className="flex flex-row mx-4">
-        <img src={headerIcon} className="w-7 h-10 mr-4" alt="header-icon" />
+        <img src={headerIcon} onClick={()=>toggleMenuHandler()} className="w-7 h-10 mr-4 cursor-pointer" alt="header-icon" />
         <img
           alt="you-tube-logo"
           className="w-20 h-10"

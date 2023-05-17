@@ -1,11 +1,13 @@
 import React from "react";
 import MainContainer from "./MainContainer";
+import SideBar from "./SideBar";
 
 const Body = () => {
   return (
-    <React.Fragment>
+    <div className="flex flex-row">
+      <SideBar/>
       <MainContainer/>
-    </React.Fragment>
+    </div>
   );
 };
 
