@@ -5,18 +5,22 @@ import userIcon from "../svg/userIcon.svg";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../Utils/appSlice";
 const Header = () => {
-  
-  const dispatch=useDispatch();
-const toggleMenuHandler=()=>{
-    dispatch(toggleMenu())
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
     // console.log(dispatch(toggleMenu))
-    console.log("hello")
-  }
+    console.log("hello");
+  };
 
   return (
     <div className="flex flex-row shadow-md p-4 justify-between">
       <div className="flex flex-row mx-4">
-        <img src={headerIcon} onClick={()=>toggleMenuHandler()} className="w-7 h-10 mr-4 cursor-pointer" alt="header-icon" />
+        <img
+          src={headerIcon}
+          onClick={() => toggleMenuHandler()}
+          className="w-7 h-10 mr-4 cursor-pointer"
+          alt="header-icon"
+        />
         <img
           alt="you-tube-logo"
           className="w-20 h-10"
@@ -39,11 +43,7 @@ const toggleMenuHandler=()=>{
       </div>
 
       <div className="mx-4">
-        <img
-          className="w-9 h-10 "
-          src={userIcon}
-          alt="user-icon"
-        />
+        <img className="w-9 h-10 " src={userIcon} alt="user-icon" />
       </div>
     </div>
   );
