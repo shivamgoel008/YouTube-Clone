@@ -1,4 +1,5 @@
 import React from "react";
+import { Shimmer } from 'react-shimmer';
 
 const VideoCard = ({ videoInfo }) => {
   
