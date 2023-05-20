@@ -1,5 +1,4 @@
 import React from "react";
-import { Shimmer } from 'react-shimmer';
 
 const VideoCard = ({ videoInfo }) => {
   
@@ -63,22 +62,22 @@ const VideoCard = ({ videoInfo }) => {
   };
 
   return (
-    <div className="w-72  rounded-lg m-8">
+    <div className="w-72  m-8">
       <img
-        className="rounded-t-lg"
+        className="rounded-xl"
         src={videoInfo?.snippet?.thumbnails?.high?.url}
         alt=""
       />
       <div className="">
-        <p className="text-lg font-bold tracking-tight">
+        <p className="text-lg font-bold tracking-tight m-2">
 
-          {videoInfo?.snippet?.title?.length>=50?videoInfo?.snippet?.title?.substring(0,60)+"...":videoInfo?.snippet?.title}
+          {videoInfo?.snippet?.title?.length>=50?videoInfo?.snippet?.title?.substring(0,50)+"...":videoInfo?.snippet?.title}
         </p>
 
-        <p className="font-normal text-base text-gray-700 dark:text-gray-400">
+        <p className="font-normal text-base text-gray-700 dark:text-gray-400 m-2">
           {videoInfo?.snippet?.channelTitle}
         </p>
-        <p className="ont-normal text-gray-700 text-base dark:text-gray-400">
+        <p className="ont-normal text-gray-700 text-base dark:text-gray-400 m-2">
           {convertToInternationalCurrencySystem(
             videoInfo?.statistics?.viewCount
           )}{" "}
