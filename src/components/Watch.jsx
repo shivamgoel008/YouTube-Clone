@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../Utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import { YOUTUBE_VIDEO_BY_ID_API } from "../Utils/constants";
+import CommentsList from "./CommentsList";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
@@ -24,7 +25,7 @@ const Watch = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div>
+    <div className="flex flex-col">
       <iframe
         className="rounded-lg m-8 shadow-2xl"
         width="885"
@@ -39,6 +40,8 @@ const Watch = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
+
+      <CommentsList/>
     </div>
   );
 };
