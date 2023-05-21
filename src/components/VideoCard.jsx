@@ -64,7 +64,7 @@ const VideoCard = ({ videoInfo }) => {
   return (
     <div className="w-72  m-8">
       <img
-        className="rounded-xl"
+        className="rounded-xl shadow-2xl"
         src={videoInfo?.snippet?.thumbnails?.high?.url}
         alt=""
       />
