@@ -11,4 +11,4 @@ export const YOUTUBE_SEARCH_SUGGESTION_API =
 export const YOUTUBE_COMMENTS_LIST_API="https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&order=relevance&videoId="
 
 
-export const YOUTUBE_ALL_REPLIES_BY_ID="https://youtube.googleapis.com/youtube/v3/comments?part=snippet&part=id&maxResults=100&parentId=[Comment parent ID]&key=[YOUR_API_KEY] "
+export const YOUTUBE_ALL_REPLIES_BY_ID="https://youtube.googleapis.com/youtube/v3/comments?part=snippet&maxResults=100&parentId="

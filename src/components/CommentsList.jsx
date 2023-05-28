@@ -40,9 +40,10 @@ const CommentsList = () => {
     dataLength={allComments.length}
     next={()=>getNextPageToken()}
     hasMore={true}
-    loader={<h4>Loading...</h4>}
+    loader={<h1>Loading...</h1>}
+    
   >
-   {allComments.map((comments)=>(
+   {allComments.length==0? <h1>No Comments</h1>: allComments.map((comments)=>(
         <Comment key={comments?.id} commentInfo={comments}/>
       ))}
   </InfiniteScroll>
